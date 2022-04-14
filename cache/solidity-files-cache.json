@@ -1,0 +1,206 @@
+{
+  "_format": "ethers-rs-sol-cache-3",
+  "paths": {
+    "artifacts": "out",
+    "sources": "src",
+    "tests": "test",
+    "libraries": [
+      "lib"
+    ]
+  },
+  "files": {
+    "/Users/offshore/kit/Ghost-Contract/src/Callee.sol": {
+      "lastModificationDate": 1649973051758,
+      "contentHash": "4d008cb7ba37cd413c0f4c38f15c242d",
+      "sourceName": "src/Callee.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "none"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ]
+            }
+          },
+          "evmVersion": "london"
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.8.12",
+      "artifacts": {
+        "Callee": {
+          "0.8.12+commit.f00d7308.Darwin.appleclang": "Callee.sol/Callee.json"
+        }
+      }
+    },
+    "/Users/offshore/kit/Ghost-Contract/src/Ghost.sol": {
+      "lastModificationDate": 1649973858813,
+      "contentHash": "9f7553044d9151119eeee9a12328298c",
+      "sourceName": "src/Ghost.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "none"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ]
+            }
+          },
+          "evmVersion": "london"
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.8.12",
+      "artifacts": {
+        "Ghost": {
+          "0.8.12+commit.f00d7308.Darwin.appleclang": "Ghost.sol/Ghost.json"
+        }
+      }
+    },
+    "/Users/offshore/kit/Ghost-Contract/src/test/Ghost.t.sol": {
+      "lastModificationDate": 1649973225585,
+      "contentHash": "d4fd7ef1433e8b6876bb8a3c2ea29e45",
+      "sourceName": "src/test/Ghost.t.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "none"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ]
+            }
+          },
+          "evmVersion": "london"
+        }
+      },
+      "imports": [
+        "src/Callee.sol",
+        "src/Ghost.sol",
+        "src/test/utils/Console.sol",
+        "src/test/utils/test.sol"
+      ],
+      "versionRequirement": ">=0.8.12",
+      "artifacts": {
+        "CheatCodes": {
+          "0.8.12+commit.f00d7308.Darwin.appleclang": "Ghost.t.sol/CheatCodes.json"
+        },
+        "GhostTest": {
+          "0.8.12+commit.f00d7308.Darwin.appleclang": "Ghost.t.sol/GhostTest.json"
+        }
+      }
+    },
+    "/Users/offshore/kit/Ghost-Contract/src/test/utils/Console.sol": {
+      "lastModificationDate": 1649868434000,
+      "contentHash": "f756579730c37ec6bd53643d93d88313",
+      "sourceName": "src/test/utils/Console.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "none"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ]
+            }
+          },
+          "evmVersion": "london"
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.4.22, <0.9.0",
+      "artifacts": {
+        "console": {
+          "0.8.12+commit.f00d7308.Darwin.appleclang": "Console.sol/console.json"
+        }
+      }
+    },
+    "/Users/offshore/kit/Ghost-Contract/src/test/utils/test.sol": {
+      "lastModificationDate": 1649866154000,
+      "contentHash": "8b777625543328d47b9f5e528a8c86fd",
+      "sourceName": "src/test/utils/test.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "none"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ]
+            }
+          },
+          "evmVersion": "london"
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.4.23",
+      "artifacts": {
+        "DSTest": {
+          "0.8.12+commit.f00d7308.Darwin.appleclang": "test.sol/DSTest.json"
+        }
+      }
+    }
+  }
+}
