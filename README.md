@@ -16,5 +16,5 @@
                                        ████  ██▒▒██  ██▒▒▒▒██  ██▒▒██
                                        ██      ██      ████      ████
 
-**This contract is under development and does not work yet. The goal of this experiment is to find out if it is possible to call another contract by executing deployment bytecode when using the CREATE opcode, but returning nothing to keep the msg.sender code size at 0**
+**This contract is an experiment to find out if it is possible to call another contract and make the msg.sender's code size appear to be 0. I am exploring  CREATE opcode to execute deployment bytecode that returns nothing to keep the msg.sender code size at 0**
 
