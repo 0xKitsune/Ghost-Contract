@@ -55,10 +55,10 @@ contract GhostTest is DSTest {
         );
 
         ///@note when uncommented below, this works but the ghost transaction does not
-        address(callee).call("");
+        // address(callee).call("");
 
-        // // ///@notice Send the ghost transaction, this will execute the payload without exposing a msg.sender to the contract that was called
-        // // ///@notice If the contract were to check the msg.sender, the address would be 0x0000000000000000000000000000000000000000
+        ///@notice Send the ghost transaction, this will execute the payload without exposing a msg.sender to the contract that was called
+        ///@notice If the contract were to check the msg.sender, the address would be 0x0000000000000000000000000000000000000000
         bool success = ghost.sendGhostTransaction(payload);
         require(success, "Ghost tx failed");
 
