@@ -47,11 +47,11 @@ contract GhostTest is DSTest {
         // DUP1
         // DUP1
         // DUP1
-        // PUSH20	185a4dc360ce69bdccee33b3784b0282f7961aea
+        // PUSH20	0c7bbb021d72db4ffba37bdf4ef055eecdbc0a295
         // GAS
         // CALL
         bytes memory payload = utils.hexStrToBytes(
-            "0x60008080808073185a4dc360ce69bdccee33b3784b0282f7961aea5AF1"
+            "0x600080808080730c7bbb021d72db4ffba37bdf4ef055eecdbc0a2955AF1"
         );
 
         ///@note when uncommented below, this works but the ghost transaction does not
