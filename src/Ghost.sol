@@ -3,14 +3,14 @@ pragma solidity >=0.8.12;
 
 /// @title Ghost
 /// @author 0xKitsune (https://github.com/0xKitsune)
-/// @notice A minimalistic contract that can execute a payload while rendering the msg.sender as 0x0000000000000000000000000000000000000000
+/// @notice A minimalistic contract that can execute a payload while appearing as a msg.sender with a codesize of 0
+/// @dev This contract demonstrates why it is insecure to rely on checking the codesize of the msg.sender to determine if the sender is an EOA 
 contract Ghost {
     /// @notice This function takes a bytecode payload that will execute during the use of the CREATE opcode
     /// @dev Since the payload executes during deployment, if the payload calls an external contract, the msg.sender is rendered as the zero address.
     function sendGhostTransaction(bytes calldata payload) public returns (bool) {
 
         assembly {
-            
             /// @notice Copy the payload into memory so that it can be passed in as deployment bytecode
             calldatacopy(0x80, payload.offset, payload.length)
 
