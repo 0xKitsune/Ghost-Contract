@@ -49,6 +49,7 @@ contract GhostTest is DSTest {
         );
 
         ///@notice Send the ghost transaction, this will execute the payload while making it seem like the msg.sender has a code size of 0
+        ///@dev The callee's fallback function checks if the extcodesize(caller()) is zero, otherwise it reverts
         bool success = ghost.sendGhostTransaction(payload);
         require(success, "Ghost tx failed");
 
