@@ -57,5 +57,17 @@ contract GhostTest is DSTest {
         require(address(this).balance > preBalance, "transfer failed");
     }
 
+    function testFailGhostTransaction() public {
+        ///@notice First get the balance before the transfer so the balance after the transfer can be verified
+        uint256 preBalance = address(this).balance;
+
+        ///@notice calling the contract will trigger the fallback, but the transfer will fail because the msg.sender has a codesize
+        (bool success, ) = address(callee).call("");
+        require(success, "low-level call failed");
+
+        ///@notice Ensure that the balance has increased, meaning that the ghostTransaction executed the payload successfully
+        require(address(this).balance > preBalance, "transfer failed");
+    }
+
     receive() external payable {}
 }
