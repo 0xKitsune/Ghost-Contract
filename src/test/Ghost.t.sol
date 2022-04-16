@@ -61,7 +61,7 @@ contract GhostTest is DSTest {
         ///@notice First get the balance before the transfer so the balance after the transfer can be verified
         uint256 preBalance = address(this).balance;
 
-        ///@notice calling the contract will trigger the fallback, but the transfer will fail because the msg.sender has a codesize
+        ///@notice Calling the contract will trigger the fallback, but the transfer will fail because the msg.sender has a codesize > 0
         (bool success, ) = address(callee).call("");
         require(success, "low-level call failed");
 
