@@ -3,17 +3,20 @@ pragma solidity >=0.8.12;
 
 ///@notice Simple contract to test ghost contract
 contract Callee {
-    address public sender;
     address payable public recepient;
 
     constructor() {
-        sender = msg.sender;
         recepient = payable(msg.sender);
     }
 
-    ///@notice Simple fallback function that sets the "sender" to msg.sender and transfers ETH
+    ///@notice Simple fallback function that transfers ETH if the msg.sender's codesize is 0
     fallback() external {
-        sender = msg.sender;
+        assembly {
+            if iszero(iszero(extcodesize(caller()))) {
+                revert(0x00, 0x00)
+            }
+        }
+
         recepient.transfer(10000);
     }
 }
