@@ -19,7 +19,7 @@ contract GhostTest is DSTest {
     Ghost ghost;
     Callee callee;
 
-    ///@notice create contract instances and give the ghost contract ETh
+    ///@notice Create contract instances and give the callee contract ETH
     function setUp() public {
         ghost = new Ghost();
         callee = new Callee();
