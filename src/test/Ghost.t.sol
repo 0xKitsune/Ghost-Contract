@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: UNLICENSED
+// SPDX-License-Identifier: GPL-3.0-only
 pragma solidity >=0.8.12;
 
 import "./utils/test.sol";
@@ -8,8 +8,6 @@ import "./utils/Console.sol";
 import "./utils/Utils.sol";
 
 interface CheatCodes {
-    function prank(address) external;
-
     function deal(address who, uint256 amount) external;
 }
 
@@ -61,7 +59,8 @@ contract GhostTest is DSTest {
         ///@notice First get the balance before the transfer so the balance after the transfer can be verified
         uint256 preBalance = address(this).balance;
 
-        ///@notice Calling the contract will trigger the fallback, but the transfer will fail because the msg.sender has a codesize > 0
+        ///@notice Calling the contract will trigger the Callee fallback
+        ///@notice The transfer within the fallback will fail because the msg.sender has a codesize > 0
         (bool success, ) = address(callee).call("");
         require(success, "low-level call failed");
 
